@@ -1,6 +1,7 @@
 const input = require('./day2_input');
 
 function getCountOfLetters([...letters]) {
+  // could reduce cost a little by tracking if we've found a hit for 2 and 3
   const lettersHash = letters.reduce((acc, cur) => {
     acc[cur] = acc[cur] ? acc[cur] + 1 : 1;
     return acc;
